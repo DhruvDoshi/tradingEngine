@@ -1,16 +1,7 @@
 import pyotp
 import requests
 from typing import Any, Dict
-from dotenv import load_dotenv
 from .config import Config
-
-load_dotenv()  # Load environment variables from .env file
-
-def get_env_var(var_name):
-    value = os.getenv(var_name)
-    if not value:
-        raise ValueError(f"Missing environment variable: {var_name}")
-    return value
 
 class ApiConnect:
     def __init__(self, config: Config):
